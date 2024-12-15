@@ -5,7 +5,8 @@ function Footer() {
         <div className="footer-copyright green lighten-4">
             <div className="container">
                 © {new Date().getFullYear()} Copyright Text
-                <a className="grey-text text-lighten-4 right" href="/">More Links</a>
+                <a className="grey-text text-lighten-4 right" href="https://github.com/web-dew-sat/react-shop"
+                   target='_blank'>Repo</a>
             </div>
         </div>
     </footer>
