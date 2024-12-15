@@ -1,0 +1,32 @@
+.basket {
+	&-list {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 5;
+		width: 50rem;
+		max-width: 95%;
+		background-color: #fff;
+		animation: show 500ms ease-in-out;
+	}
+
+	&-close {
+		position: absolute;
+		top: 0.6rem;
+		right: 0.6rem;
+		color: #fff;
+		cursor: pointer;
+	}
+}
+
+@keyframes show {
+	from {
+		top: 70%;
+		opacity: 0;
+	}
+	to {
+		top: 50%;
+		opacity: 1;
+	}
+}

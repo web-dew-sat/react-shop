@@ -1,0 +1,14 @@
+.card {
+	display: flex;
+	flex-direction: column;
+
+	&-content {
+		flex-grow: 1;
+	}
+
+	&-action {
+		.price {
+			font-size: 1.8rem;
+		}
+	}
+}
