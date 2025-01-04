@@ -1,15 +1,17 @@
 import './Cart.scss'
+import {ShopContext} from "../../context";
+import {useContext} from "react";
 
-function Cart(props) {
+function Cart() {
     const {
-        quantity = 0,
+        order,
         handleBasketShow = Function.prototype
-    } = props
+    } = useContext(ShopContext)
 
     return (
         <div className={'cart cyan darken-3 white-text'} onClick={handleBasketShow}>
             <i className='material-icons'>shopping_cart</i>
-            {quantity ? <span className={'cart-quantity'}>{quantity}</span> : 0}
+            {order.length ? <span className={'cart-quantity'}>{order.length}</span> : 0}
         </div>
     )
 }

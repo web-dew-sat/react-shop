@@ -1,4 +1,6 @@
 import './GoodsItem.scss'
+import {useContext} from "react";
+import {ShopContext} from "../../context";
 
 function GoodsItem(props) {
     const {
@@ -7,8 +9,9 @@ function GoodsItem(props) {
         displayDescription: description,
         price: {regularPrice},
         displayAssets: [{full_background}],
-        addToBasket = Function.prototype,
     } = props;
+
+    const {addToBasket = Function.prototype} = useContext(ShopContext)
 
 
     return (

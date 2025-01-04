@@ -1,8 +1,10 @@
 import './GoodsList.scss'
 import GoodsItem from "../GoodsItem/GoodsItem";
+import {ShopContext} from "../../context";
+import {useContext} from "react";
 
-function GoodsList(props) {
-    const {goods = [], addToBasket = Function.prototype} = props;
+function GoodsList() {
+    const {goods = []} = useContext(ShopContext)
 
     if (goods.length === 0) {
         return <h3>Ничего не найдено</h3>;
@@ -12,7 +14,7 @@ function GoodsList(props) {
         <div className="goods">
             {
                 goods.map((good) => (
-                    <GoodsItem key={good.mainId} {...good} addToBasket={addToBasket}/>
+                    <GoodsItem key={good.mainId} {...good}/>
                 ))
             }
         </div>
